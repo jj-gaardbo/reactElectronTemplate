@@ -31,7 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "concurrently": "3.4.0",
     "css-loader": "^0.28.10",
-    "electron": "1.6.10",
+    "electron": "1.6.16",
     "electron-builder": "^19.8.0",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",

@@ -2864,9 +2864,9 @@ electron-updater@^2.4.3:
     uuid-1345 "^0.99.6"
     xelement "^1.0.16"
 
-electron@1.6.10:
-  version "1.6.10"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.10.tgz#4f0b9cd596e35700b57128f988cc1d2ce67e5671"
+electron@1.6.16:
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.16.tgz#f37a8f49cc2625059c99eb266dee4dffe0917b63"
   dependencies:
     "@types/node" "^7.0.18"
     electron-download "^3.0.1"
