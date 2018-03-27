@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
+const path = require('path');
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     title: 'Template',
@@ -34,13 +35,20 @@ module.exports = {
     context: __dirname + '/src',
     entry: './index.js',
     output: {
-        path: __dirname + '/build',
+        path: path.resolve(__dirname, './build'),
         filename: 'bundle.js'
     },
     module: {
         loaders: [
-            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+            {
+                test: /\.jsx?$/,         // Match both .js and .jsx files
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query:
+                    {
+                        presets:['react']
+                    }
+            },
             { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'], exclude: /node_modules/ },
             { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
         ]
